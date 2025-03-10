@@ -5,8 +5,11 @@ const yeedRoutes = require("./routes/yeedroutes")
 const app = express();
 app.use(express.static('public'))
 
+
+//add database connection here url
+const dbUser = ""
+
 //database Connection
-const dbUser = "mongodb+srv://CareFreeBark565:carefreebark565@cluster0.bgujb.mongodb.net/"
 mongoose.connect(dbUser).then((result) => {
     console.log("Connected To Database");
     app.listen(3000);

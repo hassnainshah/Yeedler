@@ -1,0 +1,14 @@
+<div class="confirm" id="confirm">
+    <h3>Are You Sure</h3>
+    <div class="confirmButtons">
+    <button class="confirmDelete">Confirm</button>
+    <button onclick="closeConfirm()">Cancel</button>
+    </div>
+    <script>
+        const confirm = document.getElementById("confirm")
+
+        function closeConfirm(){
+            confirm.classList.remove("confirm-open")
+        }
+    </script>
+</div>

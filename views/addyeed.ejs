@@ -1,0 +1,20 @@
+<%- include("partials/head.ejs")%>
+<body>
+    <%- include("partials/nav.ejs") %>
+    <div class="mainBody">
+        <h3>Add Yeed<h3>
+        <div class="yeedinput">
+            <form action="/yeeds" method="POST">
+                <label>Title</label>
+                <input type="text" placeholder="Add Title" name="title" required>
+                <label>Yeed</label>
+                <textarea placeholder="Add Your Yeed" name="body" required></textarea>
+                <label>Conclusion</label>
+                <input placeholder="Conclusion" name="conclusion" required>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    <%-include("partials/foot.ejs")%>
+</body>
+

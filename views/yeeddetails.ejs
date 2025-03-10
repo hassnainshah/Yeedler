@@ -1,0 +1,33 @@
+<%-include("partials/head.ejs")%>
+<body>
+    <%-include("partials/nav.ejs")%>
+    <div class="mainBody">
+        <h3><%= yeed.title%></h3>
+        <p><%= yeed.body%></p>
+        <h2><%= yeed.conclusion%></h2>
+        <a class="delete" data-doc="<%= yeed._id %>">Delete</a>
+        <%- include("partials/confirm.ejs")%>
+    </div>
+    <%-include("partials/foot.ejs")%>
+    <script>
+        const trash = document.querySelector("a.delete");
+
+        trash.addEventListener("click", (e)=>{
+            const confirm = document.getElementById("confirm")
+            confirm.classList.add("confirm-open")
+
+            const endpoint = `/yeeds/${trash.dataset.doc}`
+            const confirmDelete = document.querySelector("button.confirmDelete")
+            confirmDelete.addEventListener("click", (e)=>{
+                fetch(endpoint, {
+                method: "DELETE",
+            })
+            .then((response)=> {
+                response.json()
+            .then((data)=> {
+                window.location.href= data.redirect
+            })})
+            .catch((err)=> console.log(err))
+        })})
+    </script>
+</body>

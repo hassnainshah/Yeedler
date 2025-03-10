@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+        :root{
+            font-family: "Quicksand";
+            margin: auto;
+            background-color: rgb(215, 82, 20);
+        }
+
+        body{
+            position: relative;
+        }
+
+        .foot{
+            text-align: center;
+            background-color: white;
+            padding-left : 10px;
+            padding-right: 10px;
+            border: 2px solid black;
+            align-items: center;
+            margin: 2px auto;
+        }
+
+        .delete{
+            position: absolute;
+            border-radius: 20px;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            margin: 2px;
+        }
+
+        .delete:hover{
+            box-shadow: 1px 2px 3px rgb(241, 241, 241);
+            cursor: pointer;
+        }
+
+        p ,h2 ,h3{
+            padding: 1px;
+            margin: 5px;
+        }
+
+        .yeedSnippet{
+            position: relative;
+            margin-top : 20px;
+            background-color: rgb(241, 241, 241);
+            border-radius: 10px;
+        }
+
+        .yeedSnippet a{
+            padding: 0px;
+        }
+
+        .yeedSnippet a:hover,a:visited,a:active{
+            font-size: medium;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 0px;
+        }
+
+        .navbar {
+            background-color: white;
+            padding-left : 10px;
+            padding-right: 10px;
+            border: 2px solid black;
+            align-items: center;
+            margin: 2px auto;
+            display: flex;
+        }
+
+        .navbar a:hover{
+            color: black;
+            font-size: medium;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 5px;
+
+            animation: Links;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .Boo{
+            margin: auto;
+        }
+
+        .BOO:hover {
+            animation: Boo;
+            animation-duration: 0.4s;
+
+        }
+
+        a, a:hover,a:visited,a:active{
+            color: black;
+            font-size: medium;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .links{
+            display: flex;
+            padding: 5px;
+            margin-left: auto;
+        }
+
+        .navbar h1{
+            font-family: "Playwrite It Moderna";
+        }
+
+
+
+        .mainBody{
+            background-color: white;
+            position: relative;
+            height: auto;
+            max-height: max-content;
+            padding-left : 10px;
+            padding-right: 10px;
+            padding-bottom: 50px;
+            margin-top: 2px;
+            /* height: 300px;
+            max-height: 400px; */
+            border: 2px solid black;
+        }
+
+        .booBitch{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding-left : 10px;
+            padding-right: 10px;
+            margin-top: 2px;
+            height: 300px;
+            max-height: 400px;
+            border: 2px solid black;
+        }
+
+        .yeedinput form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .yeedinput textarea{
+            height: 200px;
+            max-height: 200px;
+        }
+
+        .yeedSnippet:hover ,.yeedSnippet a:hover{
+            animation: snippet;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .newyeed {
+            border-radius: 10px;
+            background-color: rgb(215, 82, 20);
+            color: rgb(241, 241, 241);
+            display: flex;
+            position: absolute;
+            bottom: 10;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .newyeed p{
+            
+            padding: 0;
+            margin: 0;
+            color: rgb(241, 241, 241);
+        }
+
+        .newyeed:hover{
+            animation: newYeed 0.5s ;
+            animation-fill-mode: forwards;
+        }
+
+        .trash {
+            margin: 5px;
+            padding: 2px;
+            width: 20px;
+            position: absolute;
+            bottom: 50%;
+            right: 0;
+            transform: translateY(50%);
+            border-radius: 50%;
+            background-color: rgb(215, 82, 20);
+            text-align: center;
+        }
+
+        .trash:hover{
+            color: black;
+            font-weight: 500;
+            background-color: rgb(241, 241, 241);
+            cursor: pointer;
+        }
+
+        .aboutus{
+            padding: 40px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .aboutus a:hover{
+            animation: Links;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .big{
+            font-size: larger;
+        }
+
+        .small{
+            font-size: smaller;
+        }
+
+        .confirm{
+            color: white;
+            border: 2px solid;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px auto;
+            position: absolute;
+            border-radius: 20px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            background-color: rgb(215, 82, 20);
+            visibility: hidden;
+        }
+
+        .confirm-open{
+            visibility: visible;
+        }
+
+        .confirmButtons{
+            display: flex;
+            align-items: center;
+        }
+
+        .confirmButtons button{
+            cursor: pointer;
+            padding: 5px;
+            background-color: white;
+            margin: auto;
+            border-radius: 20px;
+            border: 0;
+            box-shadow: 2px rgb(232, 232, 232) ;
+        }
+
+        .confirmButtons button:hover{
+            animation: snippet;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes snippet{
+            0%{
+                color: black;
+                background-color: rgb(241, 241, 241);
+            }
+            100%{
+                background-color: rgb(215, 82, 20);
+                color: rgb(241, 241, 241);
+            }
+        }
+
+        @keyframes Links{
+            0%{
+                color: black;
+            }
+            100%{
+                color:rgb(215, 82, 20);
+                scale: 1.1;
+                font-size: 16px;
+            }
+        }
+
+        @keyframes newYeed {
+            0%{
+                scale: 1;
+            }
+            100%{
+                scale: 1.2;
+            }
+        }
+
+        @keyframes Boo {
+            0%{
+                scale: 1;
+            }
+            25%{
+                scale: 1.5;
+            }
+            75%{
+                scale: 0.5;
+            }
+            100%{
+                scale: 1;
+            }
+        }

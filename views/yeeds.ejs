@@ -1,0 +1,53 @@
+<%-include("partials/head.ejs")%>
+<body>
+    <%-include("partials/nav.ejs")%>
+    <div class="mainBody">
+        <h3>Yeeds</h3>
+        <% if (yeeds.length > 0) {%>
+            <% yeeds.forEach(yeed => { %>
+                <div class="yeedSnippet">
+                    <a href="/yeeds/<%=yeed._id %>"><h2><%= yeed.title %></h2>
+                        
+                            <p><%= yeed.conclusion %></p>
+                        </a>
+                    <div class="trash" data-doc="<%= yeed._id%>">x</div>
+                </div>
+            <% })} else {%>
+                <p>No yeeds found.</p>
+            <% }%>
+        <div class="newyeed">    
+        <a href="/yeeds/addyeed"><p>Add New Yeed<p></p></a>
+        </div>
+        
+        <%- include("partials/confirm.ejs")%>
+    </div>
+    <%-include("partials/foot.ejs")%>
+    <script>
+        const trash = document.querySelectorAll("div.trash").forEach((can)=>{
+            can.addEventListener('click' , (e)=>{
+                endpoint = `/yeeds/${can.dataset.doc}`
+                const confirm = document.getElementById("confirm")
+                confirm.classList.add("confirm-open")
+                const confirmDelete = document.querySelector("button.confirmDelete")
+                confirmDelete.addEventListener("click" ,(e)=>{
+                    fetch(endpoint ,{
+                method : 'DELETE'
+            })
+            .then((response)=>{
+                console.log(response)
+                response.json()
+                .then((data)=>{
+                    console.log(data)
+                    window.location.href = data.redirect;
+                }).catch((err)=>console.log(err))
+            }).catch((err)=>console.log(err))
+        })
+            })
+            
+            
+        });
+
+
+        
+    </script>
+</body>
